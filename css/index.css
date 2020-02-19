@@ -145,12 +145,13 @@ h1 {
   font-weight: bold;
   color: #f7f8f8;
   padding-bottom: 1%;
+  text-transform: uppercase;
 }
 .container {
   width: 100%;
   height: 100%;
 }
-.container header {
+header {
   width: 100%;
   height: 33%;
   background-color: #fc4647;
@@ -159,24 +160,30 @@ h1 {
   flex-direction: column;
   justify-content: center;
 }
-.container header h2 {
+header h2 {
   color: #263547;
   font-size: 3.2rem;
+  text-transform: uppercase;
 }
-.container .main {
+.main {
   display: flex;
 }
-.container h3 {
+h3 {
   font-size: 2rem;
-  text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 3px;
   padding-bottom: 4%;
+  text-transform: uppercase;
 }
-.container p {
+h4 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+p,
+a {
   line-height: 2rem;
 }
-.container .left-side {
+.left-side {
   width: 33%;
   background-color: #263547;
   display: flex;
@@ -184,7 +191,46 @@ h1 {
   padding-top: 4%;
   padding-left: 4%;
 }
-.container .right-side {
+.left-side p {
+  color: #f7f8f8;
+  font-weight: bold;
+}
+.left-side section {
+  padding-bottom: 15%;
+}
+.left-side .contact {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+.left-side .contact a {
+  color: #f7f8f8;
+}
+.left-side .references div {
+  padding-bottom: 4%;
+}
+.left-side .references .name {
+  text-transform: uppercase;
+  color: #f7f8f8;
+  font-weight: bold;
+}
+.left-side .references .company {
+  color: #e3c3c5;
+}
+.left-side .references a {
+  font-weight: bold;
+}
+.left-side h3 {
+  color: #fc4647;
+}
+.left-side p {
+  color: #f7f8f8;
+}
+.left-side a {
+  text-decoration: none;
+  color: #e3c3c5;
+}
+.right-side {
   width: 66%;
   padding-top: 4%;
   padding-left: 4%;
@@ -192,14 +238,18 @@ h1 {
   display: flex;
   flex-direction: column;
 }
-.container .right-side p {
+.right-side .main {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.right-side p {
   color: #263547;
   padding-right: 20%;
 }
-.container .profile {
-  border-bottom: 2px solid #fc4647;
+.profile {
+  border-bottom: 10px solid #fc4647;
   margin-bottom: 4%;
 }
-.container .profile p {
+.profile p {
   padding-bottom: 4%;
 }
