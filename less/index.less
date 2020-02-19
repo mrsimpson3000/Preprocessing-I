@@ -85,12 +85,12 @@ time,
 mark,
 audio,
 video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  // border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -105,42 +105,135 @@ hgroup,
 menu,
 nav,
 section {
-	display: block;
+  display: block;
 }
 
 body {
-	line-height: 1;
+  line-height: 1;
 }
 
 ol,
 ul {
-	list-style: none;
+  list-style: none;
 }
 
 blockquote,
 q {
-	quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-	content: '';
-	content: none;
+  content: "";
+  content: none;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
-	height: 100%;
+  height: 100%;
 }
+
+@red: #fc4647; // Header background and left section titles and right seperators
+@dark-blue: #4a4857; // Right section h4 sub
+@light-gray: #f7f8f8; // Background right section, p tags left side except .company
+@light-red: #e3c3c5; // p.company, a tags in references on left
+@very-dark-blue: #263547; // Left section background and h3 in right section and h4 mains right and p tags on right and h2 in header
+
+.sectionPadding () {
+  padding-top: 4%;
+  padding-left: 4%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 9rem;
+  font-weight: bold;
+  color: @light-gray;
+  padding-bottom: 1%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+
+  header {
+    width: 100%;
+    height: 33%;
+    background-color: @red;
+    padding: 0 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      color: @very-dark-blue;
+      font-size: 3.2rem;
+    }
+  } // Header closing tag
+
+  .main {
+    display: flex;
+  }
+
+  h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding-bottom: 4%;
+  }
+
+  p {
+    line-height: 2rem;
+  }
+
+  .left-side {
+    width: 33%;
+    background-color: @very-dark-blue;
+    display: flex;
+    flex-direction: column;
+    .sectionPadding();
+  } // Left side close tag
+
+  .right-side {
+    width: 66%;
+    .sectionPadding();
+    padding-bottom: 4%;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      color: @very-dark-blue;
+      padding-right: 20%;
+    }
+  } // Right side close tag
+
+  .profile {
+    border-bottom: 2px solid @red;
+    margin-bottom: 4%;
+
+    p {
+      padding-bottom: 4%;
+    }
+  }
+} // Container close tag
