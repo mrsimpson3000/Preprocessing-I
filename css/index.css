@@ -305,9 +305,6 @@ body {
   padding-left: 4%;
   font-weight: bold;
 }
-.container .main .right-side .experience .main {
-  padding-top: 4%;
-}
 .container .main .right-side .awards {
   border-bottom: unset;
 }
@@ -324,5 +321,15 @@ body {
   }
   .container .main .right-side {
     width: 100%;
+  }
+  .container .main h3 {
+    font-size: 1.6rem;
+  }
+  .container .main h4 {
+    font-size: 1.4rem;
+  }
+  .container .main p,
+  .container .main a {
+    font-size: 1.2rem;
   }
 }
