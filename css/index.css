@@ -140,18 +140,11 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
 }
-h1 {
-  font-size: 8.5rem;
-  font-weight: bold;
-  color: #f7f8f8;
-  padding-bottom: 1%;
-  text-transform: uppercase;
-}
 .container {
   width: 100%;
   height: 100%;
 }
-header {
+.container header {
   width: 100%;
   height: 33%;
   background-color: #fc4647;
@@ -160,30 +153,37 @@ header {
   flex-direction: column;
   justify-content: center;
 }
-header h2 {
+.container header h1 {
+  font-size: 8.5rem;
+  font-weight: bold;
+  color: #f7f8f8;
+  padding-bottom: 1%;
+  text-transform: uppercase;
+}
+.container header h2 {
   color: #263547;
   font-size: 3rem;
   text-transform: uppercase;
 }
-.main {
+.container .main {
   display: flex;
 }
-h3 {
+.container h3 {
   font-size: 2.6rem;
   font-weight: bold;
   letter-spacing: 3px;
   padding-bottom: 4%;
   text-transform: uppercase;
 }
-h4 {
+.container h4 {
   font-size: 1.8rem;
   text-transform: uppercase;
 }
-p,
-a {
+.container p,
+.container a {
   line-height: 2rem;
 }
-.left-side {
+.container .left-side {
   width: 33%;
   background-color: #263547;
   display: flex;
@@ -192,46 +192,46 @@ a {
   padding-left: 4%;
   padding-right: 4%;
 }
-.left-side p {
+.container .left-side p {
   color: #f7f8f8;
   font-weight: bold;
 }
-.left-side section {
+.container .left-side section {
   padding-bottom: 15%;
 }
-.left-side .contact {
+.container .left-side .contact {
   display: flex;
   flex-direction: column;
   font-weight: bold;
 }
-.left-side .contact a {
+.container .left-side .contact a {
   color: #f7f8f8;
 }
-.left-side .references div {
+.container .left-side .references div {
   padding-bottom: 4%;
 }
-.left-side .references .name {
+.container .left-side .references .name {
   text-transform: uppercase;
   color: #f7f8f8;
   font-weight: bold;
 }
-.left-side .references .company {
+.container .left-side .references .company {
   color: #e3c3c5;
 }
-.left-side .references a {
+.container .left-side .references a {
   font-weight: bold;
 }
-.left-side h3 {
+.container .left-side h3 {
   color: #fc4647;
 }
-.left-side p {
+.container .left-side p {
   color: #f7f8f8;
 }
-.left-side a {
+.container .left-side a {
   text-decoration: none;
   color: #e3c3c5;
 }
-.right-side {
+.container .right-side {
   width: 66%;
   padding-top: 4%;
   padding-left: 4%;
@@ -239,42 +239,42 @@ a {
   display: flex;
   flex-direction: column;
 }
-.right-side section {
+.container .right-side section {
   border-bottom: 10px solid #fc4647;
   padding-bottom: 4%;
   margin-bottom: 4%;
 }
-.right-side section h3 {
+.container .right-side section h3 {
   padding-bottom: 0%;
 }
-.right-side section .main {
+.container .right-side section .main {
   text-transform: uppercase;
   font-weight: bold;
   padding-top: 4%;
   padding-bottom: 2%;
 }
-.right-side section .sub {
+.container .right-side section .sub {
   text-transform: capitalize;
   padding-bottom: 2%;
   color: #4a4857;
 }
-.right-side .profile h3 {
+.container .right-side .profile h3 {
   padding-bottom: 4%;
 }
-.right-side .experience {
+.container .right-side .experience {
   padding-bottom: 4%;
 }
-.right-side .experience p {
+.container .right-side .experience p {
   padding-left: 4%;
   font-weight: bold;
 }
-.right-side .experience .main {
+.container .right-side .experience .main {
   padding-top: 4%;
 }
-.right-side .awards {
+.container .right-side .awards {
   border-bottom: unset;
 }
-.right-side p {
+.container .right-side p {
   color: #263547;
   padding-right: 20%;
 }

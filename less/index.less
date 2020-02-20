@@ -168,187 +168,191 @@ html {
 	font-size: 62.5%;
 }
 
+// Stretch: Incorporated a google font of my choosing
 body {
 	font-family: "Montserrat", sans-serif;
 	font-size: 1.6rem;
 }
 
-h1 {
-	font-size: 8.5rem;
-	font-weight: bold;
-	color: @light-gray;
-	padding-bottom: 1%;
-	.allCaps();
-}
 
 .container {
 	width: 100%;
 	height: 100%;
-}
-
-// Container close tag
-
-header {
-	width: 100%;
-	height: 33%;
-	background-color: @red;
-	padding: 0 4%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 
 
-	h2 {
-		color: @very-dark-blue;
-		font-size: 3rem;
-		.allCaps();
-	}
-}
 
-// Header closing tag
-
-.main {
-	display: flex;
-}
-
-h3 {
-	font-size: 2.6rem;
-	font-weight: bold;
-	letter-spacing: 3px;
-	padding-bottom: 4%;
-	.allCaps();
-}
-
-h4 {
-	font-size: 1.8rem;
-	.allCaps();
-}
-
-p,
-a {
-	line-height: 2rem;
-}
-
-.left-side {
-	width: 33%;
-	background-color: @very-dark-blue;
-	display: flex;
-	flex-direction: column;
-	.sectionPadding();
-	padding-right: 4%;
-
-	p {
-		color: @light-gray;
-		font-weight: bold;
-	}
-
-	section {
-		padding-bottom: 15%;
-	}
-
-	.contact {
+	header {
+		width: 100%;
+		height: 33%;
+		background-color: @red;
+		padding: 0 4%;
 		display: flex;
 		flex-direction: column;
-		font-weight: bold;
+		justify-content: center;
 
-		a {
+		h1 {
+			font-size: 8.5rem;
+			font-weight: bold;
 			color: @light-gray;
+			padding-bottom: 1%;
+			.allCaps();
+		}
+
+
+		h2 {
+			color: @very-dark-blue;
+			font-size: 3rem;
+			.allCaps();
 		}
 	}
 
-	.references {
-		div {
-			padding-bottom: 4%;
-		}
+	// Header closing tag
 
-		.name {
-			.allCaps();
-			color: @light-gray;
-			font-weight: bold;
-		}
-
-		.company {
-			color: @light-red;
-		}
-
-		a {
-			font-weight: bold;
-		}
-
+	.main {
+		display: flex;
 	}
 
 	h3 {
-		color: @red;
+		font-size: 2.6rem;
+		font-weight: bold;
+		letter-spacing: 3px;
+		padding-bottom: 4%;
+		.allCaps();
 	}
 
-	p {
-		color: @light-gray;
+	h4 {
+		font-size: 1.8rem;
+		.allCaps();
 	}
 
+	p,
 	a {
-		text-decoration: none;
-		color: @light-red;
+		line-height: 2rem;
 	}
 
-}
-
-// Left side close tag
-
-.right-side {
-	width: 66%;
-	.sectionPadding();
-	padding-bottom: 4%;
-	display: flex;
-	flex-direction: column;
-
-	section {
-		border-bottom: 10px solid @red;
-		padding-bottom: 4%;
-		margin-bottom: 4%;
-
-		h3 {
-			padding-bottom: 0%;
-		}
-
-		.main {
-			.allCaps();
-			font-weight: bold;
-			padding-top: 4%;
-			padding-bottom: 2%
-		}
-
-		.sub {
-			.capFirst();
-			padding-bottom: 2%;
-			color: @dark-blue;
-		}
-	}
-
-	.profile h3 {
-		padding-bottom: 4%;
-	}
-
-	.experience {
-		padding-bottom: 4%;
+	.left-side {
+		width: 33%;
+		background-color: @very-dark-blue;
+		display: flex;
+		flex-direction: column;
+		.sectionPadding();
+		padding-right: 4%;
 
 		p {
-			padding-left: 4%;
+			color: @light-gray;
 			font-weight: bold;
 		}
 
-		.main {
-			padding-top: 4%;
+		section {
+			padding-bottom: 15%;
+		}
+
+		.contact {
+			display: flex;
+			flex-direction: column;
+			font-weight: bold;
+
+			a {
+				color: @light-gray;
+			}
+		}
+
+		.references {
+			div {
+				padding-bottom: 4%;
+			}
+
+			.name {
+				.allCaps();
+				color: @light-gray;
+				font-weight: bold;
+			}
+
+			.company {
+				color: @light-red;
+			}
+
+			a {
+				font-weight: bold;
+			}
+
+		}
+
+		h3 {
+			color: @red;
+		}
+
+		p {
+			color: @light-gray;
+		}
+
+		a {
+			text-decoration: none;
+			color: @light-red;
+		}
+
+	}
+
+	// Left side close tag
+
+	.right-side {
+		width: 66%;
+		.sectionPadding();
+		padding-bottom: 4%;
+		display: flex;
+		flex-direction: column;
+
+		section {
+			border-bottom: 10px solid @red;
+			padding-bottom: 4%;
+			margin-bottom: 4%;
+
+			h3 {
+				padding-bottom: 0%;
+			}
+
+			.main {
+				.allCaps();
+				font-weight: bold;
+				padding-top: 4%;
+				padding-bottom: 2%
+			}
+
+			.sub {
+				.capFirst();
+				padding-bottom: 2%;
+				color: @dark-blue;
+			}
+		}
+
+		.profile h3 {
+			padding-bottom: 4%;
+		}
+
+		.experience {
+			padding-bottom: 4%;
+
+			p {
+				padding-left: 4%;
+				font-weight: bold;
+			}
+
+			.main {
+				padding-top: 4%;
+			}
+		}
+
+		.awards {
+			border-bottom: unset;
+		}
+
+		p {
+			color: @very-dark-blue;
+			padding-right: 20%;
 		}
 	}
 
-	.awards {
-		border-bottom: unset;
-	}
-
-	p {
-		color: @very-dark-blue;
-		padding-right: 20%;
-	}
+	// Right side close tag
 }
 
-// Right side close tag
+// Container close tag
