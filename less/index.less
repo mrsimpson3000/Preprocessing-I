@@ -4,45 +4,132 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
-	border: 0;
+	// border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -50,10 +137,290 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+	height: 100%;
 }
 
+@red: #fc4647; // Header background and left section titles and right seperators
+@dark-blue: #4a4857; // Right section h4 sub
+@light-gray: #f7f8f8; // Background right section, p tags left side except .company
+@light-red: #e3c3c5; // p.company, a tags in references on left
+@very-dark-blue: #263547; // Left section background and h3 in right section and h4 mains right and p tags on right and h2 in header
+
+.sectionPadding () {
+	padding-top: 4%;
+	padding-left: 4%;
+}
+
+.allCaps() {
+	text-transform: uppercase;
+}
+
+.capFirst() {
+	text-transform: capitalize;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+// Stretch: Incorporated a google font of my choosing
+body {
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.6rem;
+}
+
+
+.container {
+	width: 100%;
+	height: 100%;
+
+
+	header {
+		width: 100%;
+		height: 40%;
+		background-color: @red;
+		padding: 0 4%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		h1 {
+			font-size: 8.5rem;
+			font-weight: bold;
+			color: @light-gray;
+			padding-bottom: 1%;
+			.allCaps();
+		}
+
+		h2 {
+			color: @very-dark-blue;
+			font-size: 3rem;
+			.allCaps();
+		}
+
+		nav {
+			width: 38%;
+			display: flex;
+			background-color: @red;
+			justify-content: space-between;
+			align-items: center;
+			padding-top: 1%;
+
+			i {
+				display: none;
+			}
+
+			a {
+				text-decoration: none;
+				line-height: 2rem;
+				font-size: 2rem;
+				color: @dark-blue;
+
+				&:hover {
+					color: @light-gray;
+				}
+			}
+		}
+
+		@media (max-width: 500px) {
+			h1 {
+				font-size: 7rem;
+			}
+
+			h2 {
+				font-size: 2rem;
+			}
+
+			nav {
+				a {
+					display: none;
+				}
+
+				i {
+					display: inline-block;
+
+					&:hover {
+						color: @light-gray;
+					}
+				}
+			}
+		}
+	}
+
+	// Header closing tag
+
+	.main {
+		display: flex;
+
+
+		h3 {
+			font-size: 2.6rem;
+			font-weight: bold;
+			letter-spacing: 3px;
+			padding-bottom: 4%;
+			.allCaps();
+		}
+
+		h4 {
+			font-size: 1.8rem;
+			.allCaps();
+		}
+
+		p,
+		a {
+			line-height: 2rem;
+		}
+
+		.left-side {
+			width: 33%;
+			background-color: @very-dark-blue;
+			display: flex;
+			flex-direction: column;
+			.sectionPadding();
+			padding-right: 4%;
+
+			p {
+				color: @light-gray;
+				font-weight: bold;
+			}
+
+			section {
+				padding-bottom: 15%;
+			}
+
+			.contact {
+				display: flex;
+				flex-direction: column;
+				font-weight: bold;
+
+				a {
+					color: @light-gray;
+				}
+			}
+
+			.references {
+				div {
+					padding-bottom: 4%;
+				}
+
+				.name {
+					.allCaps();
+					color: @light-gray;
+					font-weight: bold;
+				}
+
+				.company {
+					color: @light-red;
+				}
+
+				a {
+					font-weight: bold;
+				}
+
+			}
+
+			h3 {
+				color: @red;
+			}
+
+			p {
+				color: @light-gray;
+			}
+
+			a {
+				text-decoration: none;
+				color: @light-red;
+			}
+
+		}
+
+		// Left side close tag
+
+		.right-side {
+			width: 66%;
+			.sectionPadding();
+			padding-bottom: 4%;
+			display: flex;
+			flex-direction: column;
+
+			section {
+				border-bottom: 10px solid @red;
+				padding-bottom: 4%;
+				margin-bottom: 4%;
+
+				h3 {
+					padding-bottom: 0%;
+				}
+
+				.main {
+					.allCaps();
+					font-weight: bold;
+					padding-top: 4%;
+					padding-bottom: 2%
+				}
+
+				.sub {
+					.capFirst();
+					padding-bottom: 2%;
+					color: @dark-blue;
+				}
+			}
+
+			.profile h3 {
+				padding-bottom: 4%;
+			}
+
+			.experience {
+				padding-bottom: 4%;
+
+				p {
+					padding-left: 4%;
+					font-weight: bold;
+				}
+			}
+
+			.awards {
+				border-bottom: unset;
+			}
+
+			p {
+				color: @very-dark-blue;
+				padding-right: 20%;
+			}
+		}
+	}
+
+	@media (max-width: 500px) {
+		.main {
+			flex-direction: column;
+
+			.left-side {
+				width: 100%;
+			}
+
+			.right-side {
+				width: 100%;
+			}
+
+			h3 {
+				font-size: 1.6rem;
+			}
+
+			h4 {
+				font-size: 1.4rem;
+			}
+
+			p,
+			a {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+// Container close tag
