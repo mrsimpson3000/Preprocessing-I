@@ -180,10 +180,9 @@ body {
 	height: 100%;
 
 
-
 	header {
 		width: 100%;
-		height: 33%;
+		height: 40%;
 		background-color: @red;
 		padding: 0 4%;
 		display: flex;
@@ -198,11 +197,58 @@ body {
 			.allCaps();
 		}
 
-
 		h2 {
 			color: @very-dark-blue;
 			font-size: 3rem;
 			.allCaps();
+		}
+
+		nav {
+			width: 38%;
+			display: flex;
+			background-color: @red;
+			justify-content: space-between;
+			align-items: center;
+			padding-top: 1%;
+
+			i {
+				display: none;
+			}
+
+			a {
+				text-decoration: none;
+				line-height: 2rem;
+				font-size: 2rem;
+				color: @dark-blue;
+
+				&:hover {
+					color: @light-gray;
+				}
+			}
+		}
+
+		@media (max-width: 500px) {
+			h1 {
+				font-size: 7rem;
+			}
+
+			h2 {
+				font-size: 2rem;
+			}
+
+			nav {
+				a {
+					display: none;
+				}
+
+				i {
+					display: inline-block;
+
+					&:hover {
+						color: @light-gray;
+					}
+				}
+			}
 		}
 	}
 
@@ -210,149 +256,164 @@ body {
 
 	.main {
 		display: flex;
-	}
 
-	h3 {
-		font-size: 2.6rem;
-		font-weight: bold;
-		letter-spacing: 3px;
-		padding-bottom: 4%;
-		.allCaps();
-	}
 
-	h4 {
-		font-size: 1.8rem;
-		.allCaps();
-	}
-
-	p,
-	a {
-		line-height: 2rem;
-	}
-
-	.left-side {
-		width: 33%;
-		background-color: @very-dark-blue;
-		display: flex;
-		flex-direction: column;
-		.sectionPadding();
-		padding-right: 4%;
-
-		p {
-			color: @light-gray;
+		h3 {
+			font-size: 2.6rem;
 			font-weight: bold;
+			letter-spacing: 3px;
+			padding-bottom: 4%;
+			.allCaps();
 		}
 
-		section {
-			padding-bottom: 15%;
+		h4 {
+			font-size: 1.8rem;
+			.allCaps();
 		}
 
-		.contact {
+		p,
+		a {
+			line-height: 2rem;
+		}
+
+		.left-side {
+			width: 33%;
+			background-color: @very-dark-blue;
 			display: flex;
 			flex-direction: column;
-			font-weight: bold;
+			.sectionPadding();
+			padding-right: 4%;
 
-			a {
-				color: @light-gray;
-			}
-		}
-
-		.references {
-			div {
-				padding-bottom: 4%;
-			}
-
-			.name {
-				.allCaps();
+			p {
 				color: @light-gray;
 				font-weight: bold;
 			}
 
-			.company {
+			section {
+				padding-bottom: 15%;
+			}
+
+			.contact {
+				display: flex;
+				flex-direction: column;
+				font-weight: bold;
+
+				a {
+					color: @light-gray;
+				}
+			}
+
+			.references {
+				div {
+					padding-bottom: 4%;
+				}
+
+				.name {
+					.allCaps();
+					color: @light-gray;
+					font-weight: bold;
+				}
+
+				.company {
+					color: @light-red;
+				}
+
+				a {
+					font-weight: bold;
+				}
+
+			}
+
+			h3 {
+				color: @red;
+			}
+
+			p {
+				color: @light-gray;
+			}
+
+			a {
+				text-decoration: none;
 				color: @light-red;
 			}
 
-			a {
-				font-weight: bold;
-			}
-
 		}
 
-		h3 {
-			color: @red;
-		}
+		// Left side close tag
 
-		p {
-			color: @light-gray;
-		}
-
-		a {
-			text-decoration: none;
-			color: @light-red;
-		}
-
-	}
-
-	// Left side close tag
-
-	.right-side {
-		width: 66%;
-		.sectionPadding();
-		padding-bottom: 4%;
-		display: flex;
-		flex-direction: column;
-
-		section {
-			border-bottom: 10px solid @red;
+		.right-side {
+			width: 66%;
+			.sectionPadding();
 			padding-bottom: 4%;
-			margin-bottom: 4%;
+			display: flex;
+			flex-direction: column;
 
-			h3 {
-				padding-bottom: 0%;
+			section {
+				border-bottom: 10px solid @red;
+				padding-bottom: 4%;
+				margin-bottom: 4%;
+
+				h3 {
+					padding-bottom: 0%;
+				}
+
+				.main {
+					.allCaps();
+					font-weight: bold;
+					padding-top: 4%;
+					padding-bottom: 2%
+				}
+
+				.sub {
+					.capFirst();
+					padding-bottom: 2%;
+					color: @dark-blue;
+				}
 			}
 
-			.main {
-				.allCaps();
-				font-weight: bold;
-				padding-top: 4%;
-				padding-bottom: 2%
+			.profile h3 {
+				padding-bottom: 4%;
 			}
 
-			.sub {
-				.capFirst();
-				padding-bottom: 2%;
-				color: @dark-blue;
+			.experience {
+				padding-bottom: 4%;
+
+				p {
+					padding-left: 4%;
+					font-weight: bold;
+				}
+
+				.main {
+					padding-top: 4%;
+				}
 			}
-		}
 
-		.profile h3 {
-			padding-bottom: 4%;
-		}
-
-		.experience {
-			padding-bottom: 4%;
+			.awards {
+				border-bottom: unset;
+			}
 
 			p {
-				padding-left: 4%;
-				font-weight: bold;
+				color: @very-dark-blue;
+				padding-right: 20%;
 			}
-
-			.main {
-				padding-top: 4%;
-			}
-		}
-
-		.awards {
-			border-bottom: unset;
-		}
-
-		p {
-			color: @very-dark-blue;
-			padding-right: 20%;
 		}
 	}
 
-	// Right side close tag
+	@media (max-width: 500px) {
+		.main {
+			flex-direction: column;
+
+			.left-side {
+				width: 100%;
+			}
+
+			.right-side {
+				width: 100%;
+			}
+
+		}
+	}
+
 }
 
 // Container close tag

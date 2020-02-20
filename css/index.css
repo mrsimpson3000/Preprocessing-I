@@ -146,7 +146,7 @@ body {
 }
 .container header {
   width: 100%;
-  height: 33%;
+  height: 40%;
   background-color: #fc4647;
   padding: 0 4%;
   display: flex;
@@ -165,25 +165,62 @@ body {
   font-size: 3rem;
   text-transform: uppercase;
 }
+.container header nav {
+  width: 38%;
+  display: flex;
+  background-color: #fc4647;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1%;
+}
+.container header nav i {
+  display: none;
+}
+.container header nav a {
+  text-decoration: none;
+  line-height: 2rem;
+  font-size: 2rem;
+  color: #4a4857;
+}
+.container header nav a:hover {
+  color: #f7f8f8;
+}
+@media (max-width: 500px) {
+  .container header h1 {
+    font-size: 7rem;
+  }
+  .container header h2 {
+    font-size: 2rem;
+  }
+  .container header nav a {
+    display: none;
+  }
+  .container header nav i {
+    display: inline-block;
+  }
+  .container header nav i:hover {
+    color: #f7f8f8;
+  }
+}
 .container .main {
   display: flex;
 }
-.container h3 {
+.container .main h3 {
   font-size: 2.6rem;
   font-weight: bold;
   letter-spacing: 3px;
   padding-bottom: 4%;
   text-transform: uppercase;
 }
-.container h4 {
+.container .main h4 {
   font-size: 1.8rem;
   text-transform: uppercase;
 }
-.container p,
-.container a {
+.container .main p,
+.container .main a {
   line-height: 2rem;
 }
-.container .left-side {
+.container .main .left-side {
   width: 33%;
   background-color: #263547;
   display: flex;
@@ -192,46 +229,46 @@ body {
   padding-left: 4%;
   padding-right: 4%;
 }
-.container .left-side p {
+.container .main .left-side p {
   color: #f7f8f8;
   font-weight: bold;
 }
-.container .left-side section {
+.container .main .left-side section {
   padding-bottom: 15%;
 }
-.container .left-side .contact {
+.container .main .left-side .contact {
   display: flex;
   flex-direction: column;
   font-weight: bold;
 }
-.container .left-side .contact a {
+.container .main .left-side .contact a {
   color: #f7f8f8;
 }
-.container .left-side .references div {
+.container .main .left-side .references div {
   padding-bottom: 4%;
 }
-.container .left-side .references .name {
+.container .main .left-side .references .name {
   text-transform: uppercase;
   color: #f7f8f8;
   font-weight: bold;
 }
-.container .left-side .references .company {
+.container .main .left-side .references .company {
   color: #e3c3c5;
 }
-.container .left-side .references a {
+.container .main .left-side .references a {
   font-weight: bold;
 }
-.container .left-side h3 {
+.container .main .left-side h3 {
   color: #fc4647;
 }
-.container .left-side p {
+.container .main .left-side p {
   color: #f7f8f8;
 }
-.container .left-side a {
+.container .main .left-side a {
   text-decoration: none;
   color: #e3c3c5;
 }
-.container .right-side {
+.container .main .right-side {
   width: 66%;
   padding-top: 4%;
   padding-left: 4%;
@@ -239,42 +276,53 @@ body {
   display: flex;
   flex-direction: column;
 }
-.container .right-side section {
+.container .main .right-side section {
   border-bottom: 10px solid #fc4647;
   padding-bottom: 4%;
   margin-bottom: 4%;
 }
-.container .right-side section h3 {
+.container .main .right-side section h3 {
   padding-bottom: 0%;
 }
-.container .right-side section .main {
+.container .main .right-side section .main {
   text-transform: uppercase;
   font-weight: bold;
   padding-top: 4%;
   padding-bottom: 2%;
 }
-.container .right-side section .sub {
+.container .main .right-side section .sub {
   text-transform: capitalize;
   padding-bottom: 2%;
   color: #4a4857;
 }
-.container .right-side .profile h3 {
+.container .main .right-side .profile h3 {
   padding-bottom: 4%;
 }
-.container .right-side .experience {
+.container .main .right-side .experience {
   padding-bottom: 4%;
 }
-.container .right-side .experience p {
+.container .main .right-side .experience p {
   padding-left: 4%;
   font-weight: bold;
 }
-.container .right-side .experience .main {
+.container .main .right-side .experience .main {
   padding-top: 4%;
 }
-.container .right-side .awards {
+.container .main .right-side .awards {
   border-bottom: unset;
 }
-.container .right-side p {
+.container .main .right-side p {
   color: #263547;
   padding-right: 20%;
+}
+@media (max-width: 500px) {
+  .container .main {
+    flex-direction: column;
+  }
+  .container .main .left-side {
+    width: 100%;
+  }
+  .container .main .right-side {
+    width: 100%;
+  }
 }
