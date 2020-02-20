@@ -141,7 +141,7 @@ body {
   font-size: 1.6rem;
 }
 h1 {
-  font-size: 9rem;
+  font-size: 8.5rem;
   font-weight: bold;
   color: #f7f8f8;
   padding-bottom: 1%;
@@ -162,14 +162,14 @@ header {
 }
 header h2 {
   color: #263547;
-  font-size: 3.2rem;
+  font-size: 3rem;
   text-transform: uppercase;
 }
 .main {
   display: flex;
 }
 h3 {
-  font-size: 2rem;
+  font-size: 2.6rem;
   font-weight: bold;
   letter-spacing: 3px;
   padding-bottom: 4%;
@@ -190,6 +190,7 @@ a {
   flex-direction: column;
   padding-top: 4%;
   padding-left: 4%;
+  padding-right: 4%;
 }
 .left-side p {
   color: #f7f8f8;
@@ -238,18 +239,42 @@ a {
   display: flex;
   flex-direction: column;
 }
-.right-side .main {
+.right-side section {
+  border-bottom: 10px solid #fc4647;
+  padding-bottom: 4%;
+  margin-bottom: 4%;
+}
+.right-side section h3 {
+  padding-bottom: 0%;
+}
+.right-side section .main {
   text-transform: uppercase;
   font-weight: bold;
+  padding-top: 4%;
+  padding-bottom: 2%;
+}
+.right-side section .sub {
+  text-transform: capitalize;
+  padding-bottom: 2%;
+  color: #4a4857;
+}
+.right-side .profile h3 {
+  padding-bottom: 4%;
+}
+.right-side .experience {
+  padding-bottom: 4%;
+}
+.right-side .experience p {
+  padding-left: 4%;
+  font-weight: bold;
+}
+.right-side .experience .main {
+  padding-top: 4%;
+}
+.right-side .awards {
+  border-bottom: unset;
 }
 .right-side p {
   color: #263547;
   padding-right: 20%;
-}
-.profile {
-  border-bottom: 10px solid #fc4647;
-  margin-bottom: 4%;
-}
-.profile p {
-  padding-bottom: 4%;
 }
